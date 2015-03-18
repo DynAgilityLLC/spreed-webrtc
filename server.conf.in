@@ -44,7 +44,7 @@ listen = 127.0.0.1:8080
 ; space. If you do not have one use a public one like stun.spreed.me:443. If
 ; you have a TURN server you do not need to set an STUN server as the TURN
 ; server will provide STUN services.
-;stunURIs = stun:stun.spreed.me:443
+stunURIs = stun:stun.spreed.me:443
 ; TURN server URIs in format host:port?transport=udp|tcp. You can provide
 ; multiple seperated by space. If you do not have at least one TURN server then
 ; some users will not be able to use the server as the peer to peer connection
@@ -60,13 +60,13 @@ listen = 127.0.0.1:8080
 ; Session secret to use for session id generator. 32 or 64 bytes of random data
 ; are recommented (hex encoded). A warning will be logged if hex decode fails.
 ; You can generate a secret easily with "xxd -ps -l 32 -c 32 /dev/random".
-sessionSecret = the-default-secret-do-not-keep-me
+sessionSecret = 8f23d8fe93389c840c2437444383776badfe8ab0ed29a10fb87ea4a6c5fc3e6d
 ; Encryption secret protecting the data in generated server side tokens. Use
 ; 16, 24, or 32 bytes (hex encoded) to select AES-128, AES-192, or AES-256.
 ; When you change the encryption secret, stored authentications, sessions and
 ; contacts become invalid. A warning will be logged if hex decode fails. You
 ; can generate a secret easily with "xxd -ps -l 32 -c 32 /dev/random".
-encryptionSecret = tne-default-encryption-block-key
+encryptionSecret = c28baae3ddc9b2f870a5791d4e198201a7a746d6e7e9c8458764c4df526c5e04
 ; Full path to a text file containig client tokens which a user needs to enter
 ; when accessing the web client. Each line in this file represents a valid
 ; token.
@@ -87,7 +87,7 @@ encryptionSecret = tne-default-encryption-block-key
 ; Server token is a public random string which is used to enhance security of
 ; server generated security tokens. When the serverToken is changed all existing
 ; nonces become invalid. Use 32 or 64 characters (eg. 16 or 32 byte hex).
-serverToken = i-did-not-change-the-public-token-boo
+serverToken = 873f2ee4e9e3b2945b9d3d288e5d0c0052bde28b2c2eb5f653815fdb0c8b2d97
 ; The server realm is part of the validation chain of tokens and nonces and is
 ; added as suffix to server created user ids if user creation is enabled. When
 ; the realm is changed, all existing tokens and nonces become invalid.
